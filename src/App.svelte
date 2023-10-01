@@ -48,7 +48,7 @@
             <input type="file" bind:files on:input={() => {}} />
         </div>
     {:else}
-        <p>BarcodeDetector is supported on this browser :/</p>
+        <p>BarcodeDetector isn't supported on this browser ! Try on smartphone</p>
     {/if}
     <br />
     {#if showButton}
