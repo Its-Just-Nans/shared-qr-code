@@ -29,7 +29,6 @@
 </script>
 
 <main>
-    <div />
     <div>
         <span> CurrentURL: </span>
         <a href={currentUrl} target="_blank">{currentUrl || "loading..."}</a>
@@ -100,6 +99,10 @@
     {/if}
     <br />
     <span class="errors">{errors}</span>
+    <hr />
+    <div>
+        <span>Code <a href="https://github.com/its-just-nans/shared-qr-code/">here</a></span>
+    </div>
 </main>
 
 <style>
