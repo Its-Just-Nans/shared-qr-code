@@ -41,23 +41,17 @@
         <input class="i-text" type="text" bind:value={newUrl} />
     </div>
     <br />
-    {#if "BarcodeDetector" in window}
-        <div class="type">
-            <p>Update URL with QR code (image)</p>
-            <input type="file" bind:files on:input={() => {}} />
-        </div>
-    {:else}
-        <p>BarcodeDetector isn't supported on this browser ! Try on smartphone</p>
-    {/if}
+    <div class="type">
+        <p>Update URL with QR code (image)</p>
+        <input type="file" bind:files on:input={() => {}} />
+    </div>
     <br />
     {#if showButton}
         <button
             on:click={async () => {
                 try {
                     let toUpdate = "";
-                    if ("BarcodeDetector" in window && files && files[0]) {
-                        // errors += "Reading File...";
-                        // const data = await readFile();
+                    if (files && files[0]) {
                         errors += "Reading QR code...\n";
                         const urls = await readQRCode(files[0]);
                         errors += "Finished\n";
