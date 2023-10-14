@@ -33,7 +33,8 @@
         <span> CurrentURL: </span>
         <a href={currentUrl} target="_blank">{currentUrl || "loading..."}</a>
         <br />
-        lastUpdated : {currentDate}
+        <span>lastUpdated :</span>
+        <span>{currentDate || "loading..."}</span>
     </div>
     <hr />
     <div class="type">
@@ -109,5 +110,8 @@
     .type {
         background-color: gray;
         padding: 10px;
+    }
+    a {
+        word-break: break-all;
     }
 </style>
