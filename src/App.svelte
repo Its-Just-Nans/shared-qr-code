@@ -81,7 +81,9 @@
                         return;
                     }
                     showButton = false;
-                    currentUrl = (await writeURL(toUpdate)).url;
+                    const ans = await writeURL(toUpdate);
+                    currentUrl = ans.url;
+                    currentDate = ans.date;
                     newUrl = "";
                     showButton = true;
                 } catch (e) {
